@@ -1,8 +1,5 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
-
-using libymtr.Windows;
 using Registry = libymtr.Windows.Registry;
 
 namespace PathRegister {
@@ -20,9 +17,11 @@ namespace PathRegister {
         }
 
         private static void RegisterPath(string path) {
+            Console.WriteLine("Register");
             Registry.Environment.AddPath(path);
         }
         private static void DeregisterPath(string path) {
+            Console.WriteLine("Deregister");
             Registry.Environment.RemovePath(path);
         }
     }
